@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+        <title>Could you be logged</title>
+        <description>Could you be logged - Raphaël Semeteys</description>
+        <link>http://blog.semeteys.org</link>
+        <link>http://blog.semeteys.org</link>
+        <lastBuildDate>2013-03-17T15:57:18+01:00</lastBuildDate>
+        <pubDate>2013-03-17T15:57:18+01:00</pubDate>
+        <ttl>1800</ttl>
+
+
+        <item>
+                <title>Birth</title>
+                <description>&lt;p&gt;Well.&lt;/p&gt;
+
+&lt;p&gt;This is my very very first post, and it looks at me and says: &amp;#8221;&lt;em&gt;Yeah&amp;#8230; I&amp;#8217;ll be our voice, your avatar on this Web reality!&lt;/em&gt;&amp;#8221;.&lt;/p&gt;
+
+&lt;p&gt;It could be somehow scary to &lt;code&gt;/follow/this/path&lt;/code&gt;&amp;#8230; but where would be the fun then!!!&lt;/p&gt;</description>
+                <link>http://blog.semeteys.org/2013/03/17/birth</link>
+                <guid>http://blog.semeteys.org/2013/03/17/birth</guid>
+                <pubDate>2013-03-17T00:00:00+01:00</pubDate>
+        </item>
+
+
+</channel>
+</rss>
