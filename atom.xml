@@ -1,28 +1,28 @@
+---
+layout: nil
+title : Atom Feed
+---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  
- <title>Could you be logged</title>
- <link href="http://blog.semeteys.org/" rel="self"/>
- <link href="http://blog.semeteys.org"/>
- <updated>2013-03-17T15:57:18+01:00</updated>
- <id>http://blog.semeteys.org</id>
+ <title>{{ site.title }}</title>
+ <link href="{{ site.production_url }}/{{ site.atom_path }}" rel="self"/>
+ <link href="{{ site.production_url }}"/>
+ <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <id>{{ site.production_url }}</id>
  <author>
-   <name>Raphaël Semeteys</name>
-   <email>raphael@semeteys.org</email>
+   <name>{{ site.author.name }}</name>
+   <email>{{ site.author.email }}</email>
  </author>
 
- 
+ {% for post in site.posts %}
  <entry>
-   <title>Birth</title>
-   <link href="http://blog.semeteys.org/2013/03/17/birth"/>
-   <updated>2013-03-17T00:00:00+01:00</updated>
-   <id>http://blog.semeteys.org/2013/03/17/birth</id>
-   <content type="html">&lt;p&gt;Well.&lt;/p&gt;
-
-&lt;p&gt;This is my very very first post, and it looks at me and says: &amp;#8221;&lt;em&gt;Yeah&amp;#8230; I&amp;#8217;ll be our voice, your avatar on this Web reality!&lt;/em&gt;&amp;#8221;.&lt;/p&gt;
-
-&lt;p&gt;It could be somehow scary to &lt;code&gt;/follow/this/path&lt;/code&gt;&amp;#8230; but where would be the fun then!!!&lt;/p&gt;</content>
+   <title>{{ post.title }}</title>
+   <link href="{{ site.production_url }}{{ post.url }}"/>
+   <updated>{{ post.date | date_to_xmlschema }}</updated>
+   <id>{{ site.production_url }}{{ post.id }}</id>
+   <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
- 
+ {% endfor %}
  
 </feed>
