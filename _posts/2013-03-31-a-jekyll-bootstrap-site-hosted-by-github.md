@@ -45,7 +45,9 @@ You can test locally your website, just by typing `jekyll --server` and then nav
 
 They are many other things that you can do with _Jekyll_ and _Bootstrap_ to create the best blog or website ever. Please refer to official documentations for more details.
 
-Once you're ready to publish the very first version og your website.
+### Publish to _GitHub Pages_
+
+Once you're ready to publish the very first version of your website.
 
     git add *
     git add .gitignore
