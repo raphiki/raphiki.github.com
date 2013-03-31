@@ -56,7 +56,7 @@ Once you're ready to publish the very first version of your website.
 
 Then it's time to be patient, comb your unicorn or call your ex, because GitHub may take several minutes before "jekyllizing" your _gh-pages_ branch.
 
-Finally, your website shoulb be online: <http://username.github.com/projectname/>
+Finally, your website should be online: <http://username.github.com/projectname/>
 
 You can now start to update your website:
 
@@ -68,7 +68,7 @@ You can now start to update your website:
 
 ### DNS tricks
 
-If you have a domain name you can even make point it or a subdomain of it on your GitHub pages.
+If you have a domain name you can even point it (or a subdomain of it) to your GitHub pages.
 
 #### Entire domain pointing on _GitHub Pages_
 
@@ -78,21 +78,21 @@ In your registrar control panel, create or modify an `A` entry to make it point 
 
 In your `gh-pages` branch create a _CNAME_ file containing the name of your domain: _mydomain.org_.  
 
-#### Point only a subdoomain on _GitHub Pages_
+#### Point a subdomain to _GitHub Pages_
 
 In your registrar control panel, create or modify an `CNAME` entry to make an alias of _username.github.com_.
 
-    mysubdomain.mydomain.org          CNAME   _username_.github.com
+    mysubdomain.mydomain.org          CNAME   username.github.com
 
 In your _gh-pages_ branch create a _CNAME_ file containing the name of your subdomain: _mysubdomain.mydomain.org_.  
 
-This even allows you to habe multiple subdomains to point on the different _GitHub Pages_ of your multiple projects: 
+This even allows you to have multiple subdomains to point on the different _GitHub Pages_ of your multiple projects: 
 
 * from your registrar point of view the different `CNAME` entries will point to the same target (username.github.com)
 
 * but in your different _gh-pages_ branches, the _CNAME_ files won't be identical because containing different subdomains (mysubdomain1.mydomain.org, mysubdomain2.mydomain.org...).
 
-#### What about users or organizations?
+#### What about GitHub users or organizations?
 
 If you want _GitHub Pages_ to host websites linked with your GitHub user or organization, create a new repository named _username_.github.com and push your _Jekyll Bootstrap_ contents into it instead of a _gh-pages_ branch of an existing repository.
 
