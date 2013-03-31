@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>A Jekyll Bootstrap site hosted by GitHub Pages</title>
+    <meta name="description" content="">
+    <meta name="author" content="Raphaël aka "raphiki" Semeteys">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+
+    <!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-narrow">
+          <a class="brand" href="/">Could you be blogged</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-narrow">
+
+      <div class="content">
+        
+<div class="page-header">
+  <h1>A Jekyll Bootstrap site hosted by GitHub Pages </h1>
+</div>
+
+<div class="row-fluid post-full">
+  <div class="span12">
+    <div class="date">
+      <span>31 March 2013</strong>
+    </div>
+    <div class="content">
+      <p>How to install <em>Jekyll Bootstrap</em> on <em>GitHub Pages</em> for your project?</p>
+
+<h3 id='create_a_new_ghpages_branch_in_your_repository'>Create a new <em>gh-pages</em> branch in your repository</h3>
+
+<pre><code>git clone https://github.com/username/projectname.git
+cd projectname/
+git checkout --orphan gh-pages
+git rm -rf .</code></pre>
+
+<h3 id='inject_jekyll_bootstrap_into_your_local_repository'>Inject <em>Jekyll Bootstrap</em> into your local repository</h3>
+
+<pre><code>cd ..
+git clone https://github.com/plusjade/jekyll-bootstrap.git
+cd jekyll-bootstrap/
+rm -Rf .git
+mv * ../projectname/.
+mv .gitignore ../projectname/.
+cd ..
+rmdir jekyll-bootstrap/
+cd projectname/</code></pre>
+
+<h3 id='customize_jekyll_bootstrap'>Customize <em>Jekyll Bootstrap</em></h3>
+
+<pre><code>rm -rf _posts/core-samples
+vi _config.yml</code></pre>
+
+<p>You might want to modify the <em>author :</em>, <em>title :</em> and <em>tagline:</em> sections.</p>
+
+<p>Modify your index page: <code>vi index.md</code>.</p>
+
+<p><em>Jekyll</em> accepts Markdown and HTML as input formats. You can even mix them in one file.</p>
+
+<p>It then uses templates to render the final static pages, in the <code>_site</code> folder.</p>
+
+<p>You can test locally your website, just by typing <code>jekyll --server</code> and then navigating to <a href='http://localhost:4000'>http://localhost:4000</a> with your favorite browser.</p>
+
+<p>They are many other things that you can do with <em>Jekyll</em> and <em>Bootstrap</em> to create the best blog or website ever. Please refer to official documentations for more details.</p>
+
+<p>Once you&#8217;re ready to publish the very first version og your website.</p>
+
+<pre><code>git add *
+git add .gitignore
+git commit -a-m &quot;Initial commit&quot;
+git push origin gh-pages</code></pre>
+
+<p>Then it&#8217;s time to be patient, comb your unicorn or call your ex, because GitHub may take several minutes before &#8220;jekyllizing&#8221; your <em>gh-pages</em> branch.</p>
+
+<p>Finally, your website shoulb be online: <a href='http://username.github.com/projectname/'>http://username.github.com/projectname/</a></p>
+
+<p>You can now start to update your website:</p>
+
+<ul>
+<li>
+<p>Add new pages: <code>rake page name=&quot;about.md&quot;</code></p>
+</li>
+
+<li>
+<p>Add new posts: <code>rake post title=&quot;Hello World&quot;</code></p>
+</li>
+
+<li>
+<p>Test you site locally and then push commits to your project&#8217;s <code>gh-pages</code> branch on GitHub.</p>
+</li>
+</ul>
+
+<h3 id='dns_tricks'>DNS tricks</h3>
+
+<p>If you have a domain name you can even make point it or a subdomain of it on your GitHub pages.</p>
+
+<h4 id='entire_domain_pointing_on_github_pages'>Entire domain pointing on <em>GitHub Pages</em></h4>
+
+<p>In your registrar control panel, create or modify an <code>A</code> entry to make it point to <em>GitHub Pages</em> servers.</p>
+
+<pre><code>mydomain.org             A       204.232.175.78</code></pre>
+
+<p>In your <code>gh-pages</code> branch create a <em>CNAME</em> file containing the name of your domain: <em>mydomain.org</em>.</p>
+
+<h4 id='point_only_a_subdoomain_on_github_pages'>Point only a subdoomain on <em>GitHub Pages</em></h4>
+
+<p>In your registrar control panel, create or modify an <code>CNAME</code> entry to make an alias of <em>username.github.com</em>.</p>
+
+<pre><code>mysubdomain.mydomain.org          CNAME   _username_.github.com</code></pre>
+
+<p>In your <em>gh-pages</em> branch create a <em>CNAME</em> file containing the name of your subdomain: <em>mysubdomain.mydomain.org</em>.</p>
+
+<p>This even allows you to habe multiple subdomains to point on the different <em>GitHub Pages</em> of your multiple projects:</p>
+
+<ul>
+<li>
+<p>from your registrar point of view the different <code>CNAME</code> entries will point to the same target (_username_.github.com)</p>
+</li>
+
+<li>
+<p>but in your different <em>gh-pages</em> branches, the <em>CNAME</em> files won&#8217;t be identical because containing different subdomains (_mysubdomain1.mydomain.org_, <em>mysubdomain2.mydomain.org</em>&#8230;).</p>
+</li>
+</ul>
+
+<h4 id='what_about_users_or_organizations'>What about users or organizations?</h4>
+
+<p>If you want <em>GitHub Pages</em> to host websites linked with your GitHub user or organization, create a new repository named <em>username</em>.github.com and push your <em>Jekyll Bootstrap</em> contents into it instead of a <em>gh-pages</em> branch of an existing repository.</p>
+
+<p>For more details on this DNS magic, refer to <a href='https://help.github.com/articles/setting-up-a-custom-domain-with-pages'><em>GitHub Pages</em> help</a>.</p>
+    </div>
+
+    
+
+    
+
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/2013/03/27/why-qsos-monkeys" title="Why QSOS monkeys?">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next disabled"><a>Next &rarr;</a>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  
+<diœ id="comments"></div>
+<script type="text/javascript" class="juvia">
+(function() {
+    var options = {
+        container   : '#comments',
+        site_key    : 'jvypfq3anvolmyf8ybghee8dxkqmb3m',
+        topic_key   : 'A Jekyll Bootstrap site hosted by GitHub Pages',
+        topic_url   : location.href,
+        topic_title : document.title || location.href,
+        include_base: !window.Juvia,
+        include_css : !window.Juvia
+    };
+
+    function makeQueryString(options) {
+        var key, params = [];
+        for (key in options) {
+            params.push(
+                encodeURIComponent(key) +
+                '=' +
+                encodeURIComponent(options[key]));
+        }
+        return params.join('&');
+    }
+
+    function makeApiUrl(options) {
+        // Makes sure that each call generates a unique URL, otherwise
+        // the browser may not actually perform the request.
+        if (!('_juviaRequestCounter' in window)) {
+            window._juviaRequestCounter = 0;
+        }
+
+        var result =
+            'http://comments.semeteys.org/api/show_topic.js' +
+            '?_c=' + window._juviaRequestCounter +
+            '&' + makeQueryString(options);
+        window._juviaRequestCounter++;
+        return result;
+    }
+
+    var s       = document.createElement('script');
+    s.async     = true;
+    s.type      = 'text/javascript';
+    s.className = 'juvia';
+    s.src       = makeApiUrl(options);
+    (document.getElementsByTagName('head')[0] ||
+     document.getElementsByTagName('body')[0]).appendChild(s);
+})();
+</script>
+
+
+
+
+  </div>
+</div>
+
+      </div>
+      <hr>
+      <footer>
+        <p>&copy; 2013 Raphaël aka "raphiki" Semeteys
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
+

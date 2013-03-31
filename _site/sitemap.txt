@@ -1,14 +1,15 @@
 
 http://blog.semeteys.org/rss.xml
-http://blog.semeteys.org/archive.html
-http://blog.semeteys.org/index.html
 http://blog.semeteys.org/about.html
-http://blog.semeteys.org/QSOS/about.html
-http://blog.semeteys.org/categories.html
-http://blog.semeteys.org/tags.html
+http://blog.semeteys.org/index.html
 http://blog.semeteys.org/pages.html
+http://blog.semeteys.org/QSOS/about.html
+http://blog.semeteys.org/archive.html
+http://blog.semeteys.org/tags.html
 http://blog.semeteys.org/sitemap.txt
 http://blog.semeteys.org/atom.xml
+http://blog.semeteys.org/categories.html
 
+http://blog.semeteys.org/2013/03/31/a-jekyll-bootstrap-site-hosted-by-github
 http://blog.semeteys.org/2013/03/27/why-qsos-monkeys
 http://blog.semeteys.org/2013/03/17/birth
