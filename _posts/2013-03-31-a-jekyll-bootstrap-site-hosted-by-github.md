@@ -7,7 +7,7 @@ tags: []
 ---
 {% include JB/setup %}
 
-How to install _Jekyll Bootstrap_ on _GitHub Pages_ for your project?
+How to install [Jekyll Bootstrap](http://jekyllbootstrap.com) on [GitHub Pages](http://pages.github.com) for your project?
 
 ### Create a new _gh-pages_ branch in your repository
 
@@ -86,9 +86,9 @@ In your _gh-pages_ branch create a _CNAME_ file containing the name of your subd
 
 This even allows you to habe multiple subdomains to point on the different _GitHub Pages_ of your multiple projects: 
 
-* from your registrar point of view the different `CNAME` entries will point to the same target (_username_.github.com)
+* from your registrar point of view the different `CNAME` entries will point to the same target (username.github.com)
 
-* but in your different _gh-pages_ branches, the _CNAME_ files won't be identical because containing different subdomains (_mysubdomain1.mydomain.org_, _mysubdomain2.mydomain.org_...).
+* but in your different _gh-pages_ branches, the _CNAME_ files won't be identical because containing different subdomains (mysubdomain1.mydomain.org, mysubdomain2.mydomain.org...).
 
 #### What about users or organizations?
 
