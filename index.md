@@ -8,9 +8,10 @@ tagline: love != control
 
 __Some of my projects__
 
+* [YogArkana](http://www.yogarkana.com): instruction cards for your Yoga poses (in French)
 * [QSOS](/QSOS/about.html): how to evaluate, compare and select open source components?
-* [Garous](http://garous.semeteys.org): free RPG to roleplay semi humans in a contemporary universe (in french)
-* [Waxtaan](http://www.waxtaan.org): social network of former students of french schools in Senegal (since 1999!)
+* [Garous](http://garous.semeteys.org): free RPG to roleplay semi humans in a contemporary universe (in French)
+* Waxtaan: social network of former students of french schools in Senegal (since 1999! But out of order today...)
 
 __If you're already bored...__
 
